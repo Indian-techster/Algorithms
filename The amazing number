@@ -1,0 +1,26 @@
+//This is a question regarding competitve programming
+//Q Determine whether given ,n,is an amazing number or not
+If a number has exactly three distinct divisors then it is an amazing number
+#include<stdio.h>
+int main()
+{
+unsigned long long int res=0,n,i,c=0;
+scanf("%llu",&n);
+res=(int)sqrt(n);
+for(i=2;i<=sqrt(res);i++)
+{
+if(res%i==0)
+{
+c=-1;
+break;
+}
+}
+if(c==0 && (res*res)==n)
+{
+printf("1\n");
+}
+else
+{
+printf("0\n");
+}
+}
